@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run FastAPI Server",
+      "type": "shell",
+      "command": "/usr/bin/python3",
+      "args": ["main.py"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Run with Uvicorn",
+      "type": "shell",
+      "command": "uvicorn",
+      "args": ["main:app", "--reload"],
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
